@@ -265,7 +265,6 @@ class Firewall(EventMixin):
         dport = None
         nwproto = str(match.nw_proto)
 
-        log.debug("verifyPortSecurity - installFlow")
         self.installFlow(event, 32768, srcmac, None, srcip, dstip, None, None, nw_proto)
 
         return False
